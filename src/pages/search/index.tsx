@@ -1,5 +1,5 @@
 import { Input } from 'antd';
-import { memo, useEffect, useState, type ChangeEvent } from 'react';
+import { memo, useEffect, type ChangeEvent } from 'react';
 import { useSearch } from './services/useSearch';
 import MovieView from '../../shared/components/movie-view/MovieView';
 import { useDebounce } from '../../shared/hooks/useDebounce';
