@@ -14,17 +14,19 @@ const Header = () => {
   return (
     <header className="py-4 dark:bg-[#000000]">
       <div className="container mx-auto flex items-center justify-between">
-        <div className="flex gap-1">
-          <img src={logo} className="" alt="logo" />
-          <img src={movie} />
-        </div>
+        <NavLink to={"/"}>
+          <div className="flex gap-1">
+            <img src={logo} className="" alt="logo" />
+            <img src={movie} />
+          </div>
+        </NavLink>
         <div>
           <NavLink
             end={true}
             to={"/"}
             className={({ isActive }) =>
-              `text-[18px] py-1 px-8 text-black dark:text-white ${
-                isActive ? "bg-[dodgerblue]" : ""
+              `text-[18px] py-1 px-3 text-black dark:text-white ${
+                isActive ? "bg-gray-400" : ""
               }`
             }
           >
@@ -33,8 +35,8 @@ const Header = () => {
           <NavLink
             to={"movie"}
             className={({ isActive }) =>
-              `text-[18px] py-1 px-8 text-black dark:text-white ${
-                isActive ? "bg-[dodgerblue] text-[white]" : ""
+              `text-[18px] py-1 px-3 text-black dark:text-white ${
+                isActive ? "bg-gray-400 text-[white]" : ""
               }`
             }
           >
@@ -57,7 +59,7 @@ const Header = () => {
           </NavLink>
         </div>
         <div className="flex items-center gap-[20px]">
-          <div className="w-[92px] h-[48px] bg-[#1D1D1D80] rounded-[12px] text-white flex justify-center items-center">
+          <div className="w-[92px] h-[48px] bg-[#C61F1F] dark:bg-[#1D1D1D80] rounded-[12px] text-white flex justify-center items-center">
             <select className="bg-transparent outline-none cursor-pointer">
               <option value="rus">🇷🇺 Ру</option>
               <option value="uz">🇺🇿 Uz</option>
